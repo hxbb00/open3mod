@@ -7,3 +7,5 @@ bin/
 *.pyc
 releases/
 *.pdb
+.vs/
+packages/

@@ -653,7 +653,7 @@ namespace open3mod
                     for (var i = 0; i < mesh.VertexCount; i++)
                     {
                         var tmp = AssimpToOpenTk.FromVector(mesh.Vertices[i]);
-                        Vector3.Transform(ref tmp, ref trafo, out tmp);
+                        OpenTKPort.Transform(ref tmp, ref trafo, out tmp);
 
                         min.X = Math.Min(min.X, tmp.X);
                         min.Y = Math.Min(min.Y, tmp.Y);
@@ -717,7 +717,7 @@ namespace open3mod
             {
                 var trafo = AssimpToOpenTk.FromMatrix(node.Transform);
                 trafo.Transpose();
-                Vector3.Transform(ref v, ref trafo, out v);
+                OpenTKPort.Transform(ref v, ref trafo, out v);
             } while ((node = node.Parent) != null);
             _pivot = v;
         }

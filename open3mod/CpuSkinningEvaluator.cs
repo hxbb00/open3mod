@@ -160,7 +160,7 @@ namespace open3mod
                     }
                     else
                     {
-                        Vector3.Transform(ref pos, ref boneMatrices[boneWeightTuple.Item1], out tmp);
+                        OpenTKPort.Transform(ref pos, ref boneMatrices[boneWeightTuple.Item1], out tmp);
                     }
                     transformedPos += tmp * boneWeightTuple.Item2;
                 }

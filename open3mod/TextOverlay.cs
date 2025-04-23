@@ -220,7 +220,7 @@ namespace open3mod
           
             GL.Enable(EnableCap.Texture2D);
             GL.Enable(EnableCap.Blend);
-            GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.OneMinusSrcAlpha);
+            GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
 
             GL.BindTexture(TextureTarget.Texture2D, _textTexture);
 
