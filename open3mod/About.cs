@@ -31,7 +31,7 @@ namespace open3mod
         public About()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}", AssemblyTitle);
+            this.Text = String.Format("关于 {0}", AssemblyTitle);
         
         }
 

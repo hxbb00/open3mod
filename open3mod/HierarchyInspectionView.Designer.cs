@@ -75,7 +75,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(54, 13);
             this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Unhide all";
+            this.linkLabel1.Text = "全部显示";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UnhideAllNodes);
             // 
             // textBoxFilter
@@ -88,8 +88,8 @@
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(287, 20);
             this.textBoxFilter.TabIndex = 7;
-            this.textBoxFilter.Text = "Type to search";
-            this.toolTip1.SetToolTip(this.textBoxFilter, "Enter search text here. Press Enter to lock search and to cycle through results.");
+            this.textBoxFilter.Text = "输入搜索内容";
+            this.toolTip1.SetToolTip(this.textBoxFilter, "在此输入搜索文本。按回车键锁定搜索并循环浏览结果。");
             this.textBoxFilter.Click += new System.EventHandler(this.OnClickSearchBox);
             this.textBoxFilter.TextChanged += new System.EventHandler(this.OnChangeFilterText);
             this.textBoxFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDown);
@@ -140,7 +140,7 @@
             this.labelNodeStats.Name = "labelNodeStats";
             this.labelNodeStats.Size = new System.Drawing.Size(118, 13);
             this.labelNodeStats.TabIndex = 0;
-            this.labelNodeStats.Text = "Showing m of n nodes. ";
+            this.labelNodeStats.Text = "显示 n 个节点中的 m 个。 ";
             // 
             // labelHiddenCount
             // 
@@ -149,7 +149,6 @@
             this.labelHiddenCount.Name = "labelHiddenCount";
             this.labelHiddenCount.Size = new System.Drawing.Size(158, 13);
             this.labelHiddenCount.TabIndex = 0;
-            this.labelHiddenCount.Text = "p nodes are permanently hidden";
             // 
             // panelHiddenInfo
             // 
@@ -199,19 +198,20 @@
             this.contextMenuStripTreeNode.Name = "contextMenuStripTreeNode";
             this.contextMenuStripTreeNode.Size = new System.Drawing.Size(176, 148);
             this.contextMenuStripTreeNode.Opening += new System.ComponentModel.CancelEventHandler(this.OpOpenNodeContextMenu);
+            this.labelHiddenCount.Text = "有 p 个节点被永久隐藏";
             // 
             // centerPivotToolStripMenuItem
             // 
             this.centerPivotToolStripMenuItem.Name = "centerPivotToolStripMenuItem";
             this.centerPivotToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.centerPivotToolStripMenuItem.Text = "Center View (Pivot)";
+            this.centerPivotToolStripMenuItem.Text = "居中视图（枢轴）";
             this.centerPivotToolStripMenuItem.Click += new System.EventHandler(this.OnContextMenuPivotNode);
             // 
             // hideToolStripMenuItem
             // 
             this.hideToolStripMenuItem.Name = "hideToolStripMenuItem";
             this.hideToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.hideToolStripMenuItem.Text = "Hide from View";
+            this.hideToolStripMenuItem.Text = "从视图中隐藏";
             this.hideToolStripMenuItem.Click += new System.EventHandler(this.OnContextMenuHideNode);
             // 
             // toolStripSeparator1
@@ -223,7 +223,7 @@
             // 
             this.toolStripMenuItemRename.Name = "toolStripMenuItemRename";
             this.toolStripMenuItemRename.Size = new System.Drawing.Size(175, 22);
-            this.toolStripMenuItemRename.Text = "Rename";
+            this.toolStripMenuItemRename.Text = "重命名";
             this.toolStripMenuItemRename.Click += new System.EventHandler(this.OnRenameNode);
             // 
             // toolStripMenuItem1
@@ -231,14 +231,14 @@
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(175, 22);
-            this.toolStripMenuItem1.Text = "Delete";
+            this.toolStripMenuItem1.Text = "删除";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.OnDeleteNodePermanently);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(175, 22);
-            this.toolStripMenuItem2.Text = "Delete all but this";
+            this.toolStripMenuItem2.Text = "删除除此以外的所有节点";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.DeleteAllButThisNode);
             // 
             // toolStripSeparator2
@@ -251,7 +251,7 @@
             this.detailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
             this.detailsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.detailsToolStripMenuItem.Text = "Details";
+            this.detailsToolStripMenuItem.Text = "详细信息";
             this.detailsToolStripMenuItem.Click += new System.EventHandler(this.OnContextMenuShowDetails);
             // 
             // contextMenuStripMesh
@@ -272,7 +272,7 @@
             // 
             this.toolStripMenuItemRenameMesh.Name = "toolStripMenuItemRenameMesh";
             this.toolStripMenuItemRenameMesh.Size = new System.Drawing.Size(173, 22);
-            this.toolStripMenuItemRenameMesh.Text = "Rename";
+            this.toolStripMenuItemRenameMesh.Text = "重命名";
             this.toolStripMenuItemRenameMesh.Click += new System.EventHandler(this.OnRenameMesh);
             // 
             // deleteToolStripMenuItem
@@ -280,7 +280,7 @@
             this.deleteToolStripMenuItem.Image = global::open3mod.Properties.Resources.FailedToLoad;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Text = "删除";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.OnDeleteMesh);
             // 
             // toolStripSeparator3
@@ -292,7 +292,7 @@
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(173, 22);
-            this.toolStripMenuItem3.Text = "Generate Normals";
+            this.toolStripMenuItem3.Text = "生成法线";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.OnGenerateMeshNormals);
             // 
             // toolStripMenuItem4
@@ -300,26 +300,26 @@
             this.toolStripMenuItem4.Enabled = false;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(173, 22);
-            this.toolStripMenuItem4.Text = "Generate Tangents";
+            this.toolStripMenuItem4.Text = "生成切线";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Enabled = false;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(173, 22);
-            this.toolStripMenuItem5.Text = "Generate UVs";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(170, 6);
+            this.toolStripMenuItem5.Text = "生成 UV 坐标";
             // 
             // detailsToolStripMenuItem1
             // 
             this.detailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.detailsToolStripMenuItem1.Name = "detailsToolStripMenuItem1";
             this.detailsToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
-            this.detailsToolStripMenuItem1.Text = "Mesh Editor";
+            this.detailsToolStripMenuItem1.Text = "网格编辑器";
             this.detailsToolStripMenuItem1.Click += new System.EventHandler(this.OnContextMenuShowDetails);
             // 
             // meshInfoPopup

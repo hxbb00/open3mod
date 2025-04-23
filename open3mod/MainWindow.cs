@@ -63,7 +63,7 @@ namespace open3mod
 #endif
 
 
-        public delegate void TabAddRemoveHandler (Tab tab, bool add);
+        public delegate void TabAddRemoveHandler(Tab tab, bool add);
         public event TabAddRemoveHandler TabChanged;
 
         public delegate void TabSelectionChangeHandler(Tab tab);
@@ -95,16 +95,16 @@ namespace open3mod
 
 
         public MainWindow()
-        {        
+        {
             // create delegate used for asynchronous calls 
             _delegateSelectTab = SelectTab;
             _delegatePopulateInspector = PopulateInspector;
-         
+
             InitializeComponent();
             _captionStub = Text;
 
-            AddEmptyTab();           
-   
+            AddEmptyTab();
+
             // initialize UI state shelf with a default tab
             _ui = new UiState(new Tab(_emptyTab, null));
             _fps = new FpsTracker();
@@ -134,12 +134,13 @@ namespace open3mod
 #endif
 
             // register listener for tab changs
-           tabControl1.SelectedIndexChanged += (object o, EventArgs e) => {
-               if (SelectedTabChanged != null)
-               {
-                   SelectedTabChanged(UiState.TabForId(tabControl1.SelectedTab));
-               }
-           };
+            tabControl1.SelectedIndexChanged += (object o, EventArgs e) =>
+            {
+                if (SelectedTabChanged != null)
+                {
+                    SelectedTabChanged(UiState.TabForId(tabControl1.SelectedTab));
+                }
+            };
 
             _initialized = true;
             StartUndoRedoUiStatePollLoop();
@@ -158,8 +159,8 @@ namespace open3mod
         private void AddEmptyTab()
         {
             // create default tab
-            tabControl1.TabPages.Add("empty");
-            _emptyTab = tabControl1.TabPages[tabControl1.TabPages.Count-1];
+            tabControl1.TabPages.Add("空场景");
+            _emptyTab = tabControl1.TabPages[tabControl1.TabPages.Count - 1];
             PopulateUITab(_emptyTab);
             ActivateUiTab(_emptyTab);
 
@@ -175,11 +176,11 @@ namespace open3mod
         {
             base.OnCreateControl();
 
-            DelayExecution(TimeSpan.FromSeconds(2),
-                MaybeShowTipOfTheDay);
+            //DelayExecution(TimeSpan.FromSeconds(2),
+            //    MaybeShowTipOfTheDay);
 
-            DelayExecution(TimeSpan.FromSeconds(20),
-                MaybeShowDonationDialog);
+            //DelayExecution(TimeSpan.FromSeconds(20),
+            //    MaybeShowDonationDialog);
         }
 
 
@@ -198,7 +199,8 @@ namespace open3mod
             SynchronizationContext context = SynchronizationContext.Current;
             System.Threading.Timer timer = null;
             timer = new System.Threading.Timer(
-                (_) => {
+                (_) =>
+                {
                     if (timer != null)
                     {
                         timer.Dispose();
@@ -241,7 +243,6 @@ namespace open3mod
             tui.Size = ui.ClientSize;
             tui.AutoSize = false;
             tui.Dock = DockStyle.Fill;
-            ;
             ui.Controls.Add(tui);
         }
 
@@ -292,10 +293,10 @@ namespace open3mod
                 var tab = UiState.TabForId(tabControl1.TabPages[j]);
                 Debug.Assert(tab != null);
 
-                if(tab.File == file)
+                if (tab.File == file)
                 {
                     // if so, activate its tab and return
-                    if(setActive)
+                    if (setActive)
                     {
                         SelectTab(tabControl1.TabPages[j]);
                     }
@@ -303,7 +304,7 @@ namespace open3mod
                     return;
                 }
             }
-            
+
             var key = GenerateTabKey();
             tabControl1.TabPages.Add(key, GenerateTabCaption(file) + LoadingTitlePostfix);
 
@@ -390,8 +391,8 @@ namespace open3mod
             CoreSettings.CoreSettings.Default.Save();
 
             recentToolStripMenuItem.DropDownItems.Insert(0, new ToolStripMenuItem(
-                Path.GetFileName(file), 
-                null, 
+                Path.GetFileName(file),
+                null,
                 (sender, args) => AddTab(file)));
         }
 
@@ -406,7 +407,7 @@ namespace open3mod
         private string GenerateTabCaption(string file)
         {
             var name = Path.GetFileName(file);
-            for (int j = 0; j < tabControl1.TabPages.Count; ++j )
+            for (int j = 0; j < tabControl1.TabPages.Count; ++j)
             {
                 if (name == tabControl1.TabPages[j].Text)
                 {
@@ -421,7 +422,7 @@ namespace open3mod
                                 numberedName = null;
                                 break;
                             }
-                        }                    
+                        }
                     }
                     return numberedName;
                 }
@@ -455,7 +456,7 @@ namespace open3mod
             if (tab == tabControl1.SelectedTab)
             {
                 // need to select another tab first
-                for (var i = 0; i < tabControl1.TabCount; ++i) 
+                for (var i = 0; i < tabControl1.TabCount; ++i)
                 {
                     if (tabControl1.TabPages[i] == tab)
                     {
@@ -464,7 +465,7 @@ namespace open3mod
                     SelectTab(tabControl1.TabPages[i]);
                     break;
                 }
-            }            
+            }
 
             // free all internal data for this scene
             UiState.RemoveTab(tab);
@@ -477,7 +478,7 @@ namespace open3mod
                 TabChanged((Tab)tab.Tag, false);
             }
 
-            if(_emptyTab == tab)
+            if (_emptyTab == tab)
             {
                 _emptyTab = null;
             }
@@ -509,21 +510,21 @@ namespace open3mod
 
             // update UI check boxes
             var vm = _ui.ActiveTab.ActiveViewMode;
-            fullViewToolStripMenuItem.CheckState = toolStripButtonFullView.CheckState = 
-                vm == Tab.ViewMode.Single 
-                ? CheckState.Checked 
+            fullViewToolStripMenuItem.CheckState = toolStripButtonFullView.CheckState =
+                vm == Tab.ViewMode.Single
+                ? CheckState.Checked
                 : CheckState.Unchecked;
-            twoViewsToolStripMenuItem.CheckState = toolStripButtonTwoViews.CheckState = 
-                vm == Tab.ViewMode.Two 
-                ? CheckState.Checked 
+            twoViewsToolStripMenuItem.CheckState = toolStripButtonTwoViews.CheckState =
+                vm == Tab.ViewMode.Two
+                ? CheckState.Checked
                 : CheckState.Unchecked;
             twoViewsHorToolStripMenuItem.CheckState = toolStripButtonTwoViewsHor.CheckState =
                 vm == Tab.ViewMode.TwoHorizontal
                 ? CheckState.Checked
                 : CheckState.Unchecked;
-            fourViewsToolStripMenuItem.CheckState = toolStripButtonFourViews.CheckState = 
-                vm == Tab.ViewMode.Four 
-                ? CheckState.Checked 
+            fourViewsToolStripMenuItem.CheckState = toolStripButtonFourViews.CheckState =
+                vm == Tab.ViewMode.Four
+                ? CheckState.Checked
                 : CheckState.Unchecked;
 
             // some other UI housekeeping, this also injects the GL panel into the tab
@@ -558,7 +559,7 @@ namespace open3mod
                 tab.ActiveScene = new Scene(tab.File);
                 CoreSettings.CoreSettings.Default.CountFilesOpened++;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 tab.SetFailed(ex.Message);
             }
@@ -570,7 +571,7 @@ namespace open3mod
                 {
                     return;
                 }
-                t.Text = t.Text.Substring(0,t.Text.Length - LoadingTitlePostfix.Length);
+                t.Text = t.Text.Substring(0, t.Text.Length - LoadingTitlePostfix.Length);
 
                 if (tab.State == Tab.TabState.Failed)
                 {
@@ -588,7 +589,7 @@ namespace open3mod
             {
                 if (setActive)
                 {
-                    SelectTab((TabPage) tab.Id);
+                    SelectTab((TabPage)tab.Id);
                 }
                 PopulateInspector(tab);
                 updateTitle();
@@ -597,7 +598,7 @@ namespace open3mod
             {
                 if (setActive)
                 {
-                    BeginInvoke(_delegateSelectTab, new[] {tab.Id});
+                    BeginInvoke(_delegateSelectTab, new[] { tab.Id });
                 }
                 BeginInvoke(_delegatePopulateInspector, new object[] { tab });
                 BeginInvoke(updateTitle);
@@ -621,13 +622,13 @@ namespace open3mod
 
         public TabPage TabPageForTab(Tab tab)
         {
-            return (TabPage) tab.Id;
+            return (TabPage)tab.Id;
         }
 
 
         public TabUiSkeleton UiForTab(Tab tab)
         {
-            return ((TabUiSkeleton) TabPageForTab(tab).Controls[0]);
+            return ((TabUiSkeleton)TabPageForTab(tab).Controls[0]);
         }
 
 
@@ -651,7 +652,7 @@ namespace open3mod
                 _renderer.Dispose();
             }
 
-            _renderer = new Renderer(this);           
+            _renderer = new Renderer(this);
 
 #if USE_APP_IDLE
             // register Idle event so we get regular callbacks for drawing
@@ -688,8 +689,8 @@ namespace open3mod
 
 
         private void ApplicationIdle(object sender, EventArgs e)
-        {           
-            if(IsDisposed)
+        {
+            if (IsDisposed)
             {
                 return;
             }
@@ -704,12 +705,12 @@ namespace open3mod
 
 
         private void FrameUpdate()
-        {          
+        {
             _fps.Update();
             var delta = _fps.LastFrameDelta;
 
             _renderer.Update(delta);
-            foreach(var tab in UiState.Tabs)
+            foreach (var tab in UiState.Tabs)
             {
                 if (tab.ActiveScene != null)
                 {
@@ -809,7 +810,7 @@ namespace open3mod
             UiState.ActiveTab.ActiveViewMode = Tab.ViewMode.Single;
 
             UncheckViewMode();
-            toolStripButtonFullView.CheckState = CheckState.Checked;     
+            toolStripButtonFullView.CheckState = CheckState.Checked;
             fullViewToolStripMenuItem.CheckState = CheckState.Checked;
         }
 
@@ -878,7 +879,7 @@ namespace open3mod
                         // hack: store the owning tab so the event handlers for
                         // the context menu know on whom they operate
                         _tabContextMenuOwner = tabControl1.TabPages[i];
-                        tabContextMenuStrip.Show(tabControl1, e.Location);                    
+                        tabContextMenuStrip.Show(tabControl1, e.Location);
                     }
                 }
             }
@@ -919,13 +920,17 @@ namespace open3mod
 
         private void OnFileMenuOpen(object sender, EventArgs e)
         {
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            OnFileOpen();
+        }
+        private void OnFileOpen()
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 var names = openFileDialog.FileNames;
                 var first = true;
-                foreach(var name in names)
+                foreach (var name in names)
                 {
-                    AddTab(name,true, first);
+                    AddTab(name, true, first);
                     first = false;
                 }
             }
@@ -934,7 +939,7 @@ namespace open3mod
 
         private void OnFileMenuCloseAll(object sender, EventArgs e)
         {
-            while(tabControl1.TabPages.Count > 1)
+            while (tabControl1.TabPages.Count > 1)
             {
                 CloseTab(tabControl1.TabPages[0]);
             }
@@ -955,7 +960,7 @@ namespace open3mod
 
 
         private void OnCloseForm(object sender, FormClosedEventArgs e)
-        {           
+        {
             UiState.Dispose();
             _renderer.Dispose();
         }
@@ -965,10 +970,10 @@ namespace open3mod
         {
             if (_settings == null || _settings.IsDisposed)
             {
-                _settings = new SettingsDialog {Main = this};
+                _settings = new SettingsDialog { Main = this };
             }
 
-            if(!_settings.Visible)
+            if (!_settings.Visible)
             {
                 _settings.Show();
             }
@@ -1084,7 +1089,7 @@ namespace open3mod
                     var location = CoreSettings.CoreSettings.Default.Location;
                     // If the saved location is off-screen, show the window at 0|0. This happens in multi-monitor environments
                     // where the monitor holding open3mod is subsequently removed.
-                    Location = Screen.AllScreens.FirstOrDefault(scr => scr.Bounds.Contains(location)) != null ? location : Point.Empty;         
+                    Location = Screen.AllScreens.FirstOrDefault(scr => scr.Bounds.Contains(location)) != null ? location : Point.Empty;
                     Size = size;
                 }
             }
@@ -1121,6 +1126,16 @@ namespace open3mod
         partial void OnKeyDown(object sender, KeyEventArgs e);
         partial void OnKeyUp(object sender, KeyEventArgs e);
         partial void OnMouseDown(object sender, MouseEventArgs e);
+        void OnMouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+            var activeTab = UiState.ActiveTab;
+            if (activeTab.ActiveScene == null)
+            {
+                OnFileOpen();
+            }
+        }
+
         partial void OnMouseEnter(object sender, EventArgs e);
         partial void OnMouseLeave(object sender, EventArgs e);
         partial void OnMouseMove(object sender, MouseEventArgs e);
@@ -1137,9 +1152,6 @@ namespace open3mod
 
         private void OnDonate(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            linkLabelDonate.LinkVisited = false;
-            var donate = new DonationDialog();
-            donate.ShowDialog();
         }
 
 
@@ -1150,20 +1162,20 @@ namespace open3mod
                 var list = imp.GetSupportedImportFormats();
 
                 // do not associate .xml - it is too generic 
-                var filteredList = list.Where(s => s != ".xml").ToArray();           
+                var filteredList = list.Where(s => s != ".xml").ToArray();
 
                 var listString = string.Join(", ", filteredList);
-                if(DialogResult.OK == MessageBox.Show(this, "The following file extensions will be associated with open3mod: " + listString,
-                    "Set file associations",
+                if (DialogResult.OK == MessageBox.Show(this, "以下文件扩展名将与open3mod相关联: " + listString,
+                    "设置文件扩展名",
                     MessageBoxButtons.OKCancel))
                 {
                     if (!FileAssociations.SetAssociations(list))
                     {
-                        MessageBox.Show(this, "Failed to set file extensions","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show(this, "设置文件扩展名失败", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        MessageBox.Show(this, "File extensions have been successfully associated", "open3mod", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(this, "已成功关联文件扩展名", "open3mod", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -1222,7 +1234,8 @@ namespace open3mod
             // This however introduces a nasty dependency from a (scene-specific) UndoStack
             // back to MainWindow which design-wise I want to avoid.
             DelayExecution(new TimeSpan(0, 0, 0, 0, 100),
-                () => {
+                () =>
+                {
                     UpdateUndoRedoUiState();
                     StartUndoRedoUiStatePollLoop();
                 });
@@ -1234,32 +1247,32 @@ namespace open3mod
             if (scene == null)
             {
                 toolStripButtonUndo.Enabled = undoToolStripMenuItem.Enabled = false;
-                toolStripButtonUndo.ToolTipText = undoToolStripMenuItem.Text = "Undo";
+                toolStripButtonUndo.ToolTipText = undoToolStripMenuItem.Text = "撤销";
                 toolStripButtonRedo.Enabled = redoToolStripMenuItem.Enabled = false;
-                toolStripButtonRedo.ToolTipText = redoToolStripMenuItem.Text = "Redo";
+                toolStripButtonRedo.ToolTipText = redoToolStripMenuItem.Text = "重做";
                 return;
             }
             var undo = scene.UndoStack;
             if (undo.CanUndo())
             {
                 toolStripButtonUndo.Enabled = undoToolStripMenuItem.Enabled = true;
-                toolStripButtonUndo.ToolTipText = undoToolStripMenuItem.Text = "Undo " + undo.GetUndoDescription();
+                toolStripButtonUndo.ToolTipText = undoToolStripMenuItem.Text = "撤销 " + undo.GetUndoDescription();
             }
             else
             {
                 toolStripButtonUndo.Enabled = undoToolStripMenuItem.Enabled = false;
-                toolStripButtonUndo.ToolTipText = undoToolStripMenuItem.Text = "Undo";
+                toolStripButtonUndo.ToolTipText = undoToolStripMenuItem.Text = "撤销";
             }
 
             if (undo.CanRedo())
             {
                 toolStripButtonRedo.Enabled = redoToolStripMenuItem.Enabled = true;
-                toolStripButtonRedo.ToolTipText = redoToolStripMenuItem.Text = "Redo " + undo.GetRedoDescription();
+                toolStripButtonRedo.ToolTipText = redoToolStripMenuItem.Text = "重做 " + undo.GetRedoDescription();
             }
             else
             {
                 toolStripButtonRedo.Enabled = redoToolStripMenuItem.Enabled = false;
-                toolStripButtonRedo.ToolTipText = redoToolStripMenuItem.Text = "Redo";
+                toolStripButtonRedo.ToolTipText = redoToolStripMenuItem.Text = "重做";
             }
         }
 
@@ -1300,10 +1313,11 @@ namespace open3mod
             {
                 return;
             }
-      
+
             activeTab.ActiveScene = null;
             new Thread(
-                () => {
+                () =>
+                {
                     activeTab.ActiveScene = new Scene(activeTab.File);
                     BeginInvoke(new Action(() => PopulateInspector(activeTab)));
                 }).Start();
@@ -1324,7 +1338,7 @@ namespace open3mod
                 _normalsDialog.Dispose();
                 _normalsDialog = null;
             }
-            _normalsDialog = new NormalVectorGeneratorDialog(scene, scene.Raw.Meshes, TabPageForTab(activeTab).Text + " (all meshes)");
+            _normalsDialog = new NormalVectorGeneratorDialog(scene, scene.Raw.Meshes, TabPageForTab(activeTab).Text + " (所有网格)");
             _normalsDialog.Show(this);
         }
 

@@ -63,7 +63,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Translation:";
+            this.label1.Text = "平移:";
             // 
             // textBoxTransX
             // 
@@ -124,7 +124,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Scaling:";
+            this.label5.Text = "缩放:";
             // 
             // labelScalingZ
             // 
@@ -236,16 +236,16 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 13);
             this.label12.TabIndex = 14;
-            this.label12.Text = "Rotation:";
+            this.label12.Text = "旋转:";
             // 
             // comboBoxRotMode
             // 
             this.comboBoxRotMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRotMode.FormattingEnabled = true;
             this.comboBoxRotMode.Items.AddRange(new object[] {
-            "Euler XYZ (degrees)",
-            "Euler XYZ (radians)",
-            "Quaternion"});
+            "欧拉角 XYZ (度)",
+            "欧拉角 XYZ (弧度)",
+            "四元数"});
             this.comboBoxRotMode.Location = new System.Drawing.Point(93, 63);
             this.comboBoxRotMode.Name = "comboBoxRotMode";
             this.comboBoxRotMode.Size = new System.Drawing.Size(158, 21);
@@ -278,8 +278,7 @@
             this.checkBoxNonStandard.Name = "checkBoxNonStandard";
             this.checkBoxNonStandard.Size = new System.Drawing.Size(306, 30);
             this.checkBoxNonStandard.TabIndex = 24;
-            this.checkBoxNonStandard.Text = "Transformation does not define an invertible affine operation\r\nconsisting of scal" +
-    "ing, rotation and translation.\r\n";
+            this.checkBoxNonStandard.Text = "变换未定义由缩放、旋转和平移组成的可逆仿射操作。";
             this.checkBoxNonStandard.UseVisualStyleBackColor = true;
             // 
             // TrafoMatrixViewControl

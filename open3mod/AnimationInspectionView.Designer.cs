@@ -67,7 +67,7 @@
             this.labelGoto.Name = "labelGoto";
             this.labelGoto.Size = new System.Drawing.Size(33, 13);
             this.labelGoto.TabIndex = 15;
-            this.labelGoto.Text = "Go to";
+            this.labelGoto.Text = "跳转至";
             // 
             // buttonFaster
             // 
@@ -79,7 +79,7 @@
             this.buttonFaster.Name = "buttonFaster";
             this.buttonFaster.Size = new System.Drawing.Size(60, 40);
             this.buttonFaster.TabIndex = 14;
-            this.buttonFaster.Text = "Faster";
+            this.buttonFaster.Text = "加速";
             this.buttonFaster.UseVisualStyleBackColor = true;
             this.buttonFaster.Click += new System.EventHandler(this.OnFaster);
             // 
@@ -93,7 +93,7 @@
             this.buttonSlower.Name = "buttonSlower";
             this.buttonSlower.Size = new System.Drawing.Size(60, 40);
             this.buttonSlower.TabIndex = 13;
-            this.buttonSlower.Text = "Slower";
+            this.buttonSlower.Text = "减速";
             this.buttonSlower.UseVisualStyleBackColor = true;
             this.buttonSlower.Click += new System.EventHandler(this.OnSlower);
             // 
@@ -104,7 +104,7 @@
             this.checkBoxLoop.Name = "checkBoxLoop";
             this.checkBoxLoop.Size = new System.Drawing.Size(50, 17);
             this.checkBoxLoop.TabIndex = 12;
-            this.checkBoxLoop.Text = "Loop";
+            this.checkBoxLoop.Text = "循环";
             this.checkBoxLoop.UseVisualStyleBackColor = true;
             this.checkBoxLoop.CheckedChanged += new System.EventHandler(this.OnChangeLooping);
             // 
@@ -129,7 +129,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Available Animations:";
+            this.label3.Text = "可用动画:";
             // 
             // listBoxAnimations
             // 
@@ -198,7 +198,6 @@
             this.labelSpeed.Name = "labelSpeed";
             this.labelSpeed.Size = new System.Drawing.Size(41, 13);
             this.labelSpeed.TabIndex = 18;
-            this.labelSpeed.Text = "Speed:";
             // 
             // timeSlideControl
             // 
@@ -220,20 +219,21 @@
             this.renameToolStripMenuItem});
             this.contextMenuStripAnims.Name = "contextMenuStripAnims";
             this.contextMenuStripAnims.Size = new System.Drawing.Size(118, 48);
+            this.labelSpeed.Text = "速度:";
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Text = "删除";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.OnDeleteAnimation);
             // 
             // renameToolStripMenuItem
             // 
             this.renameToolStripMenuItem.Name = "renameToolStripMenuItem";
             this.renameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.renameToolStripMenuItem.Text = "Rename";
+            this.renameToolStripMenuItem.Text = "重命名";
             this.renameToolStripMenuItem.Click += new System.EventHandler(this.OnRenameAnimation);
             // 
             // AnimationInspectionView

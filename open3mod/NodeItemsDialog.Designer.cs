@@ -3,14 +3,14 @@
     partial class NodeItemsDialog
     {
         /// <summary>
-        /// Required designer variable.
+        /// 必需的设计器变量。
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// 清理正在使用的所有资源。
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +23,8 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// 设计器支持所需的方法 - 不要使用代码编辑器修改
+        /// 此方法的内容。
         /// </summary>
         private void InitializeComponent()
         {
@@ -56,7 +56,7 @@
             this.groupBox1.Size = new System.Drawing.Size(368, 210);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Local Transformation";
+            this.groupBox1.Text = "局部变换";
             // 
             // groupBox2
             // 
@@ -66,7 +66,7 @@
             this.groupBox2.Size = new System.Drawing.Size(368, 210);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Global Transformation";
+            this.groupBox2.Text = "全局变换";
             // 
             // label1
             // 
@@ -75,7 +75,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Children (direct):";
+            this.label1.Text = "直接子节点:";
             // 
             // label2
             // 
@@ -84,7 +84,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Children (total):";
+            this.label2.Text = "总子节点:";
             // 
             // label3
             // 
@@ -93,7 +93,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Meshes (owned):";
+            this.label3.Text = "拥有的网格:";
             // 
             // label4
             // 
@@ -102,7 +102,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Meshes (total):";
+            this.label4.Text = "总网格:";
             // 
             // groupBox3
             // 
@@ -119,7 +119,7 @@
             this.groupBox3.Size = new System.Drawing.Size(368, 82);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Statistics";
+            this.groupBox3.Text = "统计信息";
             // 
             // labelMeshesTotal
             // 
@@ -172,7 +172,7 @@
             this.checkBoxShowGlobalTransformation.Name = "checkBoxShowGlobalTransformation";
             this.checkBoxShowGlobalTransformation.Size = new System.Drawing.Size(162, 23);
             this.checkBoxShowGlobalTransformation.TabIndex = 9;
-            this.checkBoxShowGlobalTransformation.Text = "Show Global Transformation ...";
+            this.checkBoxShowGlobalTransformation.Text = "显示全局变换 ...";
             this.checkBoxShowGlobalTransformation.UseVisualStyleBackColor = true;
             this.checkBoxShowGlobalTransformation.CheckedChanged += new System.EventHandler(this.OnToggleShowGlobalTrafo);
             // 
@@ -186,7 +186,7 @@
             this.checkBoxShowAnimated.Name = "checkBoxShowAnimated";
             this.checkBoxShowAnimated.Size = new System.Drawing.Size(133, 17);
             this.checkBoxShowAnimated.TabIndex = 0;
-            this.checkBoxShowAnimated.Text = "Show animated values";
+            this.checkBoxShowAnimated.Text = "显示动画值";
             this.checkBoxShowAnimated.UseVisualStyleBackColor = true;
             this.checkBoxShowAnimated.CheckedChanged += new System.EventHandler(this.OnChangeAnimationState);
             // 
@@ -217,7 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "NodeItemsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "<NodeName> Details";
+            this.Text = "<节点名称> 详细信息";
             this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

@@ -34,39 +34,27 @@ namespace open3mod
     {
         private static String[] _tips = new[]
             {
-@"You can lock on a search by pressing ENTER.
+@"您可以通过按回车键锁定搜索结果。
 
-Pressing ENTER again cycles through the search 
-results. The current selection is highlighted
-in yellow then.",
+再次按下回车键可在搜索结果中循环切换。
+当前选中项会以黄色高亮显示。",
 
-@"You can permanently hide parts of a scene by
-right-clicking on it in the Scene Browser 
-and selecting 'Hide'.
-",
+@"您可以通过在场景浏览器中右键单击
+场景的某些部分并选择 '隐藏' 来永久隐藏它们。",
 
- @"Double-click on a texture to see it in full size. 
-If the texture viewer is already open, hovering 
-over a mini texture shows a quick preview of it.
-",
+ @"双击纹理可查看其完整尺寸。
+如果纹理查看器已打开，将鼠标悬停在小纹理上可快速预览。",
 
-  @"In the toolbar you can highlight the joints in 
-a scene. This is extremely useful when viewing 
-rigged models. When animations are played, 
-the visualization reflects the skeletal 
-movements.
-",
+  @"在工具栏中，您可以突出显示场景中的关节。
+在查看带骨骼的模型时，这非常有用。
+播放动画时，可视化效果会反映骨骼的运动。",
 
-  @"When hovering over a joint in the Scene Browser,
-joint highlighting is automatically turned on and 
-the selected joint highlighted.
-",
+  @"将鼠标悬停在场景浏览器中的关节上时，
+关节高亮显示功能会自动开启，并且选中的关节会被高亮显示。",
 
-   @"Use Bullseye mode to lock the current 3D view.
-When you hover with your mouse over parts of the
-3D scene, the Scene Browser automatically 
-highlights them in the scene hierarchy.
-",
+   @"使用靶心模式锁定当前 3D 视图。
+当您将鼠标悬停在 3D 场景的某些部分上时，
+场景浏览器会自动在场景层级中突出显示它们。",
             };
 
         private int _cursor;
@@ -118,4 +106,4 @@ highlights them in the scene hierarchy.
     }
 }
 
-/* vi: set shiftwidth=4 tabstop=4: */ 
+/* vi: set shiftwidth=4 tabstop=4: */

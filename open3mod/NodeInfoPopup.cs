@@ -41,10 +41,9 @@ namespace open3mod
 
 
         /// <summary>
-        /// Sets the contents of the info pop-up given an assimp node.
+        /// 根据给定的 Assimp 节点设置信息弹出窗口的内容。
         /// 
-        /// At the time this method is called, the node info popup's
-        /// location has already been adjusted by the caller.
+        /// 调用此方法时，调用者已调整了节点信息弹出窗口的位置。
         /// </summary>
         public void Populate(Assimp.Scene scene, Node node, NodePurpose purpose)
         {
@@ -54,32 +53,32 @@ namespace open3mod
             switch (purpose)
             {
                 case NodePurpose.Joint:
-                    labelCaption.Text = "Joint";
+                    labelCaption.Text = "关节";
                     break;
                 case NodePurpose.ImporterGenerated:
-                    labelCaption.Text = "Root";
+                    labelCaption.Text = "根节点";
                     break;
                 case NodePurpose.GenericMeshHolder:
-                    labelCaption.Text = "Node";
+                    labelCaption.Text = "节点";
                     break;
                 case NodePurpose.Camera:
-                    labelCaption.Text = "Camera";
+                    labelCaption.Text = "相机";
                     break;
                 case NodePurpose.Light:
-                    labelCaption.Text = "Light";
+                    labelCaption.Text = "灯光";
                     break;
                 default:
                     Debug.Assert(false);
                     break;
             }
 
-            // count children recursively
+            // 递归计算子节点数量
             var children = 0;
             CountChildren(node, ref children);
 
             var animated = false;
 
-            // check whether there are any animation channels for this node
+            // 检查此节点是否有任何动画通道
             for (var i = 0; i < scene.AnimationCount && !animated; ++i )
             {
                 var anim = scene.Animations[i];
@@ -93,7 +92,7 @@ namespace open3mod
                 }
             }
 
-            labelInfo.Text = string.Format("{0} Children\n{1}", children, (animated ? "Animated" : "Not animated"));
+            labelInfo.Text = string.Format("{0} 个子节点\n{1}", children, (animated ? "有动画" : "无动画"));
         }
 
 
@@ -108,4 +107,4 @@ namespace open3mod
     }
 }
 
-/* vi: set shiftwidth=4 tabstop=4: */ 
+/* vi: set shiftwidth=4 tabstop=4: */

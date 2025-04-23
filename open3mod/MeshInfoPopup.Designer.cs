@@ -58,7 +58,7 @@
             this.labelCaption.Name = "labelCaption";
             this.labelCaption.Size = new System.Drawing.Size(37, 13);
             this.labelCaption.TabIndex = 12;
-            this.labelCaption.Text = "Mesh";
+            this.labelCaption.Text = "网格";
             // 
             // labelInfo
             // 
@@ -67,7 +67,7 @@
             this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(66, 26);
             this.labelInfo.TabIndex = 0;
-            this.labelInfo.Text = "134 Vertices\r\n197 Faces";
+            this.labelInfo.Text = "134个顶点\r\n197个面";
             // 
             // label1
             // 

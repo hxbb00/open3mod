@@ -440,7 +440,7 @@ namespace open3mod
 
                             if (!_replaced)
                             {
-                                labelOldTexture.Text = "was " + old;
+                                labelOldTexture.Text = "ÊÇ " + old;
                                 texCaptionLabel.Top -= 4;
 
                                 _replaced = true;

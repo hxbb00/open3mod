@@ -85,7 +85,7 @@
             this.checkBoxFilterVerbose});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.filterToolStripMenuItem.Text = "Filter";
+            this.filterToolStripMenuItem.Text = "过滤";
             this.filterToolStripMenuItem.Click += new System.EventHandler(this.filterToolStripMenuItem_Click);
             // 
             // checkBoxFilterError
@@ -94,7 +94,7 @@
             this.checkBoxFilterError.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxFilterError.Name = "checkBoxFilterError";
             this.checkBoxFilterError.Size = new System.Drawing.Size(162, 22);
-            this.checkBoxFilterError.Text = "Errors";
+            this.checkBoxFilterError.Text = "错误";
             // 
             // checkBoxFilterWarning
             // 
@@ -102,7 +102,7 @@
             this.checkBoxFilterWarning.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxFilterWarning.Name = "checkBoxFilterWarning";
             this.checkBoxFilterWarning.Size = new System.Drawing.Size(162, 22);
-            this.checkBoxFilterWarning.Text = "Warnings";
+            this.checkBoxFilterWarning.Text = "警告";
             // 
             // checkBoxFilterInformation
             // 
@@ -110,7 +110,7 @@
             this.checkBoxFilterInformation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxFilterInformation.Name = "checkBoxFilterInformation";
             this.checkBoxFilterInformation.Size = new System.Drawing.Size(162, 22);
-            this.checkBoxFilterInformation.Text = "Information";
+            this.checkBoxFilterInformation.Text = "信息";
             // 
             // checkBoxFilterVerbose
             // 
@@ -118,7 +118,7 @@
             this.checkBoxFilterVerbose.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxFilterVerbose.Name = "checkBoxFilterVerbose";
             this.checkBoxFilterVerbose.Size = new System.Drawing.Size(162, 22);
-            this.checkBoxFilterVerbose.Text = "Verbose (Debug)";
+            this.checkBoxFilterVerbose.Text = "详细 (调试)";
             // 
             // toolsToolStripMenuItem
             // 
@@ -127,20 +127,20 @@
             this.saveToFileToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
+            this.toolsToolStripMenuItem.Text = "工具";
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Text = "清空";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.OnClearAll);
             // 
             // saveToFileToolStripMenuItem
             // 
             this.saveToFileToolStripMenuItem.Name = "saveToFileToolStripMenuItem";
             this.saveToFileToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.saveToFileToolStripMenuItem.Text = "Save to File";
+            this.saveToFileToolStripMenuItem.Text = "保存到文件";
             this.saveToFileToolStripMenuItem.Click += new System.EventHandler(this.OnSave);
             // 
             // comboBoxSource
@@ -160,7 +160,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Show log for";
+            this.label1.Text = "显示日志来源";
             // 
             // LogViewer
             // 
@@ -174,7 +174,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LogViewer";
-            this.Text = "Log File Viewer";
+            this.Text = "日志文件查看器";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

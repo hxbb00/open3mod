@@ -51,7 +51,7 @@ namespace open3mod
             Debug.Assert(mesh != null);
             Debug.Assert(_owner != null);
 
-            labelInfo.Text = string.Format("{0} Vertices\n{1} Faces\n", mesh.VertexCount, mesh.FaceCount);
+            labelInfo.Text = string.Format("{0}个顶点\n{1}个面\n", mesh.VertexCount, mesh.FaceCount);
         }
     }
 }

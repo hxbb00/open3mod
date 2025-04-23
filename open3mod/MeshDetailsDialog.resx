@@ -112,16 +112,16 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonDeleteVertexData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAAd0SU1FB98FAhUmKzjaWF4AAADuSURBVDhPpVPBDYMwEIuQ+m4H4MmvU7ADD3bg
+        EQAACxEBf2RfkQAAAAd0SU1FB98FAhUmKzjaWF4AAADuSURBVDhPpVPBDYMwEIuQ+m4H4MmvU7ADD3bg
         04kYoOq3E3SNqlvwqgS1ExsRVKm0teTcxXYSESBMIQzgJN7AIggTFLBgjXN4yjg/UGzAUaR4VXiGe3rK
         ON/Y6BcG6ykaC1BbZXpZCRDOMsxWFr0284riIisBInkAHwrxFN7NUWTvk5nZT7tdWkxAcC3B5aXeRc/p
         lcrmsIBag0/QJ5LsqdXKvIcN1A70YrOTF+FXm2E2N2xAZJu4Rf38CFUVszNguG6/xHGMayIgkt+8RmYx
@@ -131,7 +131,7 @@
   <data name="buttonDeleteFaceData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAAd0SU1FB98FAhUmKzjaWF4AAADuSURBVDhPpVPBDYMwEIuQ+m4H4MmvU7ADD3bg
+        EAAACxABrSO9dQAAAAd0SU1FB98FAhUmKzjaWF4AAADuSURBVDhPpVPBDYMwEIuQ+m4H4MmvU7ADD3bg
         04kYoOq3E3SNqlvwqgS1ExsRVKm0teTcxXYSESBMIQzgJN7AIggTFLBgjXN4yjg/UGzAUaR4VXiGe3rK
         ON/Y6BcG6ykaC1BbZXpZCRDOMsxWFr0284riIisBInkAHwrxFN7NUWTvk5nZT7tdWkxAcC3B5aXeRc/p
         lcrmsIBag0/QJ5LsqdXKvIcN1A70YrOTF+FXm2E2N2xAZJu4Rf38CFUVszNguG6/xHGMayIgkt+8RmYx

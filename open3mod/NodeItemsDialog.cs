@@ -70,9 +70,9 @@ namespace open3mod
             mat.Transpose();
             trafoMatrixViewControlGlobal.SetMatrix(ref mat);
 
-            Text = node.Name + " - Node Details";
+            Text = node.Name + " - 节点详细信息";
 
-            // populate statistics
+            // 填充统计信息
             labelMeshesDirect.Text = node.MeshCount.ToString(CultureInfo.InvariantCulture);
             labelChildrenDirect.Text = node.ChildCount.ToString(CultureInfo.InvariantCulture);
 
@@ -155,7 +155,7 @@ namespace open3mod
             const int collapseOffset = 34;
             if (checkBoxShowGlobalTransformation.Checked)
             {
-                checkBoxShowGlobalTransformation.Text = "Show Global Transformation ...";
+                checkBoxShowGlobalTransformation.Text = "显示全局变换 ...";
                 Height -= trafoMatrixViewControlGlobal.Height + collapseOffset;
 
                 trafoMatrixViewControlGlobal.Visible = false;
@@ -164,7 +164,7 @@ namespace open3mod
             {
                 if (!initial)
                 {
-                    checkBoxShowGlobalTransformation.Text = "Hide Global Transformation ...";
+                    checkBoxShowGlobalTransformation.Text = "隐藏全局变换 ...";
                     Height += trafoMatrixViewControlGlobal.Height + collapseOffset;
                 }
                 trafoMatrixViewControlGlobal.Visible = true;
@@ -173,10 +173,10 @@ namespace open3mod
 
         public bool HoverUpdateEnabled
         {
-            // Currently, we do not have any sub dialogs so Hover Update is permanently on.
+            // 目前，我们没有任何子对话框，因此悬停更新始终开启。
             get { return true; }
         }
     }
 }
 
-/* vi: set shiftwidth=4 tabstop=4: */ 
+/* vi: set shiftwidth=4 tabstop=4: */

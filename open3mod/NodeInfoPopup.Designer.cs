@@ -56,7 +56,7 @@
             this.labelCaption.Name = "labelCaption";
             this.labelCaption.Size = new System.Drawing.Size(37, 13);
             this.labelCaption.TabIndex = 12;
-            this.labelCaption.Text = "Node";
+            this.labelCaption.Text = "节点";
             // 
             // labelInfo
             // 

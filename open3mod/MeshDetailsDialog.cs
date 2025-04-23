@@ -207,7 +207,7 @@ namespace open3mod
             if (tab == null)
             {
                 pictureBoxMaterial.Image = null;
-                labelMaterialName.Text = "None";
+                labelMaterialName.Text = "无";
                 return;
             }
 
@@ -219,7 +219,7 @@ namespace open3mod
             var inspector = ui.GetInspector();
             var thumb = inspector.Materials.GetMaterialControl(mat);
             pictureBoxMaterial.Image = thumb.GetCurrentPreviewImage();
-            labelMaterialName.Text = mat.Name.Length > 0 ? mat.Name : "Unnamed Material";
+            labelMaterialName.Text = mat.Name.Length > 0 ? mat.Name : "未命名的材质";
         }
 
 

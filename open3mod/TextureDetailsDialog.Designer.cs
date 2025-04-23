@@ -53,7 +53,7 @@
             this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(101, 13);
             this.labelInfo.TabIndex = 3;
-            this.labelInfo.Text = "Size: <W> x <H> px";
+            this.labelInfo.Text = "大小: <W> x <H> px";
             // 
             // checkBoxHasAlpha
             // 
@@ -64,7 +64,7 @@
             this.checkBoxHasAlpha.Name = "checkBoxHasAlpha";
             this.checkBoxHasAlpha.Size = new System.Drawing.Size(114, 17);
             this.checkBoxHasAlpha.TabIndex = 4;
-            this.checkBoxHasAlpha.Text = "Has Alpha Channel";
+            this.checkBoxHasAlpha.Text = "有Alpha通道";
             this.checkBoxHasAlpha.UseVisualStyleBackColor = true;
             // 
             // TextureDetailsDialog
@@ -78,7 +78,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "TextureDetailsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "<TexName> - Details";
+            this.Text = "<TexName> - 详情";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

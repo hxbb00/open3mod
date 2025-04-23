@@ -65,7 +65,7 @@
             this.tabPageTree.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageTree.Size = new System.Drawing.Size(349, 668);
             this.tabPageTree.TabIndex = 0;
-            this.tabPageTree.Text = "Tree";
+            this.tabPageTree.Text = "树";
             // 
             // tabPageTextures
             // 
@@ -76,7 +76,7 @@
             this.tabPageTextures.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageTextures.Size = new System.Drawing.Size(349, 668);
             this.tabPageTextures.TabIndex = 1;
-            this.tabPageTextures.Text = "Textures";
+            this.tabPageTextures.Text = "纹理";
             this.tabPageTextures.UseVisualStyleBackColor = true;
             this.tabPageTextures.MouseEnter += new System.EventHandler(this.TabPageTexturesMouseEnter);
             // 
@@ -103,7 +103,7 @@
             this.tabPageMaterials.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageMaterials.Size = new System.Drawing.Size(349, 668);
             this.tabPageMaterials.TabIndex = 3;
-            this.tabPageMaterials.Text = "Materials";
+            this.tabPageMaterials.Text = "材质";
             this.tabPageMaterials.UseVisualStyleBackColor = true;
             this.tabPageMaterials.MouseEnter += new System.EventHandler(this.TabPageMaterialsMouseEnter);
             // 
@@ -126,7 +126,7 @@
             this.tabPageAnimations.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageAnimations.Size = new System.Drawing.Size(349, 668);
             this.tabPageAnimations.TabIndex = 2;
-            this.tabPageAnimations.Text = "Animations";
+            this.tabPageAnimations.Text = "动画";
             this.tabPageAnimations.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1

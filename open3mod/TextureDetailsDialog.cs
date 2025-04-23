@@ -55,13 +55,13 @@ namespace open3mod
             _tex = tex;
             var img = tex.Texture.Image;
 
-            Text = Path.GetFileName(tex.FilePath) + " - Details";
+            Text = Path.GetFileName(tex.FilePath) + " - ฯ๊ว้";
 
             pictureBox1.Image = img;
 
             if (img != null)
             {
-                labelInfo.Text = string.Format("Size: {0} x {1} px", img.Width, img.Height);
+                labelInfo.Text = string.Format("ด๓ะก: {0} x {1} px", img.Width, img.Height);
             }
             checkBoxHasAlpha.Checked = tex.Texture.HasAlpha == Texture.AlphaState.HasAlpha;
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;

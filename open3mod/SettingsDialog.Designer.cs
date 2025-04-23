@@ -117,7 +117,7 @@
             this.tabPageGeneral.Name = "tabPageGeneral";
             this.tabPageGeneral.Size = new System.Drawing.Size(532, 381);
             this.tabPageGeneral.TabIndex = 4;
-            this.tabPageGeneral.Text = "General";
+            this.tabPageGeneral.Text = "常规";
             this.tabPageGeneral.UseVisualStyleBackColor = true;
             // 
             // ExitAppCheckbox
@@ -129,7 +129,7 @@
             this.ExitAppCheckbox.Name = "ExitAppCheckbox";
             this.ExitAppCheckbox.Size = new System.Drawing.Size(215, 17);
             this.ExitAppCheckbox.TabIndex = 0;
-            this.ExitAppCheckbox.Text = "Exit application upon closing the last tab";
+            this.ExitAppCheckbox.Text = "关闭最后一个标签页时退出应用程序";
             this.ExitAppCheckbox.UseVisualStyleBackColor = true;
             // 
             // tabPage1
@@ -141,7 +141,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(532, 381);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Rendering";
+            this.tabPage1.Text = "渲染";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -165,7 +165,7 @@
             this.groupBox1.Size = new System.Drawing.Size(491, 293);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Custom Settings";
+            this.groupBox1.Text = "自定义设置";
             // 
             // checkBoxBFCulling
             // 
@@ -176,7 +176,7 @@
             this.checkBoxBFCulling.Name = "checkBoxBFCulling";
             this.checkBoxBFCulling.Size = new System.Drawing.Size(112, 17);
             this.checkBoxBFCulling.TabIndex = 13;
-            this.checkBoxBFCulling.Text = "Back-Face Culling";
+            this.checkBoxBFCulling.Text = "背面剔除";
             this.checkBoxBFCulling.UseVisualStyleBackColor = true;
             this.checkBoxBFCulling.CheckedChanged += new System.EventHandler(this.checkBoxBFCulling_CheckedChanged);
             // 
@@ -187,15 +187,15 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 13);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Lighting Mode";
+            this.label6.Text = "光照模式";
             // 
             // comboBoxSetLightingMode
             // 
             this.comboBoxSetLightingMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSetLightingMode.FormattingEnabled = true;
             this.comboBoxSetLightingMode.Items.AddRange(new object[] {
-            "Low Quality",
-            "High Quality"});
+            "低质量",
+            "高质量"});
             this.comboBoxSetLightingMode.Location = new System.Drawing.Point(186, 201);
             this.comboBoxSetLightingMode.Name = "comboBoxSetLightingMode";
             this.comboBoxSetLightingMode.Size = new System.Drawing.Size(153, 21);
@@ -209,7 +209,7 @@
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(152, 17);
             this.checkBox3.TabIndex = 10;
-            this.checkBox3.Text = "Order-correct transparency";
+            this.checkBox3.Text = "顺序正确的透明度";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -220,16 +220,15 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(301, 39);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Note: some of the settings below are ignored for the \"Legacy\" \r\nbackend. Also, th" +
-    "e legacy backend supports no GPU-based\r\nskinning so animations may run slowly.";
+            this.label5.Text = "注意：以下部分设置在 \"传统\" 后端中会被忽略。\r\n此外，传统后端不支持基于 GPU 的蒙皮，\r\n因此动画可能运行缓慢。";
             // 
             // comboBoxSetBackend
             // 
             this.comboBoxSetBackend.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSetBackend.FormattingEnabled = true;
             this.comboBoxSetBackend.Items.AddRange(new object[] {
-            "OpenGL Legacy",
-            "OpenGL Modern"});
+            "OpenGL 传统模式",
+            "OpenGL 现代模式"});
             this.comboBoxSetBackend.Location = new System.Drawing.Point(186, 35);
             this.comboBoxSetBackend.Name = "comboBoxSetBackend";
             this.comboBoxSetBackend.Size = new System.Drawing.Size(248, 21);
@@ -243,7 +242,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Rendering Backend";
+            this.label4.Text = "渲染后端模式";
             // 
             // checkBoxLinearMIP
             // 
@@ -255,7 +254,7 @@
             this.checkBoxLinearMIP.Name = "checkBoxLinearMIP";
             this.checkBoxLinearMIP.Size = new System.Drawing.Size(72, 17);
             this.checkBoxLinearMIP.TabIndex = 6;
-            this.checkBoxLinearMIP.Text = "Use MIPs";
+            this.checkBoxLinearMIP.Text = "使用 MIP 贴图";
             this.checkBoxLinearMIP.UseVisualStyleBackColor = true;
             this.checkBoxLinearMIP.CheckedChanged += new System.EventHandler(this.OnChangeMipSettings);
             // 
@@ -264,9 +263,9 @@
             this.comboBoxTexResolution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTexResolution.FormattingEnabled = true;
             this.comboBoxTexResolution.Items.AddRange(new object[] {
-            "Full",
-            "Medium",
-            "Low"});
+            "完整",
+            "中等",
+            "低"});
             this.comboBoxTexResolution.Location = new System.Drawing.Point(186, 119);
             this.comboBoxTexResolution.Name = "comboBoxTexResolution";
             this.comboBoxTexResolution.Size = new System.Drawing.Size(153, 21);
@@ -280,7 +279,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Texture Resolution";
+            this.label3.Text = "纹理分辨率";
             // 
             // label1
             // 
@@ -289,7 +288,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Multisampling (MSAA) Mode";
+            this.label1.Text = "多重采样 (MSAA) 模式";
             // 
             // label2
             // 
@@ -298,17 +297,17 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Texture Filter";
+            this.label2.Text = "纹理过滤";
             // 
             // comboBoxSetTextureFilter
             // 
             this.comboBoxSetTextureFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSetTextureFilter.FormattingEnabled = true;
             this.comboBoxSetTextureFilter.Items.AddRange(new object[] {
-            "None",
-            "Linear",
-            "Anisotropic Low",
-            "Anisotropic High"});
+            "无",
+            "线性",
+            "各向异性 低",
+            "各向异性 高"});
             this.comboBoxSetTextureFilter.Location = new System.Drawing.Point(186, 174);
             this.comboBoxSetTextureFilter.Name = "comboBoxSetTextureFilter";
             this.comboBoxSetTextureFilter.Size = new System.Drawing.Size(153, 21);
@@ -320,10 +319,10 @@
             this.comboBoxSetMultiSampling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSetMultiSampling.FormattingEnabled = true;
             this.comboBoxSetMultiSampling.Items.AddRange(new object[] {
-            "None",
-            "Slight",
-            "Normal",
-            "Maximum"});
+            "无",
+            "轻微",
+            "正常",
+            "最大"});
             this.comboBoxSetMultiSampling.Location = new System.Drawing.Point(186, 147);
             this.comboBoxSetMultiSampling.Name = "comboBoxSetMultiSampling";
             this.comboBoxSetMultiSampling.Size = new System.Drawing.Size(153, 21);
@@ -338,7 +337,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(398, 17);
             this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Automatically select rendering settings based on measured system performance";
+            this.checkBox1.Text = "根据测量的系统性能自动选择渲染设置";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -351,7 +350,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(532, 381);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Import";
+            this.tabPage2.Text = "导入";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox4
@@ -363,7 +362,7 @@
             this.groupBox4.Size = new System.Drawing.Size(477, 89);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Optimization";
+            this.groupBox4.Text = "优化";
             // 
             // checkBoxmergeDuplicateVertices
             // 
@@ -375,7 +374,7 @@
             this.checkBoxmergeDuplicateVertices.Name = "checkBoxmergeDuplicateVertices";
             this.checkBoxmergeDuplicateVertices.Size = new System.Drawing.Size(248, 17);
             this.checkBoxmergeDuplicateVertices.TabIndex = 9;
-            this.checkBoxmergeDuplicateVertices.Text = "Merge duplicate vertices (highly recommended)";
+            this.checkBoxmergeDuplicateVertices.Text = "合并重复顶点（强烈推荐）";
             this.checkBoxmergeDuplicateVertices.UseVisualStyleBackColor = true;
             // 
             // checkBoxOptimize
@@ -388,7 +387,7 @@
             this.checkBoxOptimize.Name = "checkBoxOptimize";
             this.checkBoxOptimize.Size = new System.Drawing.Size(246, 17);
             this.checkBoxOptimize.TabIndex = 8;
-            this.checkBoxOptimize.Text = "Optimize geometry for vertex cache throughput";
+            this.checkBoxOptimize.Text = "优化几何顶点缓存吞吐量";
             this.checkBoxOptimize.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -401,7 +400,7 @@
             this.groupBox3.Size = new System.Drawing.Size(477, 96);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Cleanup";
+            this.groupBox3.Text = "拓扑优化"; // 假设原文本为英文，汉化
             // 
             // checkBoxRemoveDegenerates
             // 
@@ -413,7 +412,7 @@
             this.checkBoxRemoveDegenerates.Name = "checkBoxRemoveDegenerates";
             this.checkBoxRemoveDegenerates.Size = new System.Drawing.Size(169, 17);
             this.checkBoxRemoveDegenerates.TabIndex = 9;
-            this.checkBoxRemoveDegenerates.Text = "Remove degenerate geometry";
+            this.checkBoxRemoveDegenerates.Text = "移除退化图元"; // 假设原文本为英文，汉化
             this.checkBoxRemoveDegenerates.UseVisualStyleBackColor = true;
             // 
             // checkBoxFixWinding
@@ -426,7 +425,7 @@
             this.checkBoxFixWinding.Name = "checkBoxFixWinding";
             this.checkBoxFixWinding.Size = new System.Drawing.Size(271, 17);
             this.checkBoxFixWinding.TabIndex = 10;
-            this.checkBoxFixWinding.Text = "Attempt to correct face orientation / normal direction";
+            this.checkBoxFixWinding.Text = "修正环绕顺序"; // 假设原文本为英文，汉化
             this.checkBoxFixWinding.UseVisualStyleBackColor = true;
             // 
             // checkBoxSortByPrimitiveType
@@ -438,7 +437,7 @@
             this.checkBoxSortByPrimitiveType.Name = "checkBoxSortByPrimitiveType";
             this.checkBoxSortByPrimitiveType.Size = new System.Drawing.Size(288, 17);
             this.checkBoxSortByPrimitiveType.TabIndex = 7;
-            this.checkBoxSortByPrimitiveType.Text = "Sort meshes by primitive types (i.e. line, points, triangles)";
+            this.checkBoxSortByPrimitiveType.Text = "按图元类型排序"; // 假设原文本为英文，汉化
             this.checkBoxSortByPrimitiveType.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -450,7 +449,7 @@
             this.groupBox2.Size = new System.Drawing.Size(477, 88);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Derived data";
+            this.groupBox2.Text = "几何处理"; // 假设原文本为英文，汉化
             // 
             // checkBoxGenerateTangentSpace
             // 
@@ -462,7 +461,7 @@
             this.checkBoxGenerateTangentSpace.Name = "checkBoxGenerateTangentSpace";
             this.checkBoxGenerateTangentSpace.Size = new System.Drawing.Size(231, 17);
             this.checkBoxGenerateTangentSpace.TabIndex = 6;
-            this.checkBoxGenerateTangentSpace.Text = "Compute tangent-space for normal mapping";
+            this.checkBoxGenerateTangentSpace.Text = "生成切线空间数据"; // 假设原文本为英文，汉化
             this.checkBoxGenerateTangentSpace.UseVisualStyleBackColor = true;
             this.checkBoxGenerateTangentSpace.CheckedChanged += new System.EventHandler(this.checkBoxGenerateTangentSpace_CheckedChanged);
             // 
@@ -476,7 +475,7 @@
             this.checkBoxComputeNormals.Name = "checkBoxComputeNormals";
             this.checkBoxComputeNormals.Size = new System.Drawing.Size(259, 17);
             this.checkBoxComputeNormals.TabIndex = 5;
-            this.checkBoxComputeNormals.Text = "Compute smooth normals where none are present";
+            this.checkBoxComputeNormals.Text = "计算法线数据"; // 假设原文本为英文，汉化
             this.checkBoxComputeNormals.UseVisualStyleBackColor = true;
             this.checkBoxComputeNormals.CheckedChanged += new System.EventHandler(this.checkBoxComputeNormals_CheckedChanged);
             // 
@@ -511,7 +510,7 @@
             this.tabPageTextures.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageTextures.Size = new System.Drawing.Size(532, 381);
             this.tabPageTextures.TabIndex = 3;
-            this.tabPageTextures.Text = "Textures";
+            this.tabPageTextures.Text = "纹理设置"; // 假设原文本为英文，汉化
             this.tabPageTextures.UseVisualStyleBackColor = true;
             // 
             // checkBoxLoadTextures
@@ -524,7 +523,7 @@
             this.checkBoxLoadTextures.Name = "checkBoxLoadTextures";
             this.checkBoxLoadTextures.Size = new System.Drawing.Size(94, 17);
             this.checkBoxLoadTextures.TabIndex = 7;
-            this.checkBoxLoadTextures.Text = "Load Textures";
+            this.checkBoxLoadTextures.Text = "加载纹理"; // 假设原文本为英文，汉化
             this.checkBoxLoadTextures.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -534,7 +533,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(177, 13);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Additional search folders for textures";
+            this.label7.Text = "额外的纹理搜索文件夹"; // 假设原文本为英文，汉化
             // 
             // tabPageLeapMotion
             // 
@@ -545,7 +544,7 @@
             this.tabPageLeapMotion.Name = "tabPageLeapMotion";
             this.tabPageLeapMotion.Size = new System.Drawing.Size(532, 381);
             this.tabPageLeapMotion.TabIndex = 4;
-            this.tabPageLeapMotion.Text = "Leap Motion";
+            this.tabPageLeapMotion.Text = "Leap Motion 设置"; // 假设原文本为英文，汉化
             this.tabPageLeapMotion.UseVisualStyleBackColor = true;
             // 
             // linkLabelLM
@@ -556,8 +555,8 @@
             this.linkLabelLM.Size = new System.Drawing.Size(108, 13);
             this.linkLabelLM.TabIndex = 3;
             this.linkLabelLM.TabStop = true;
-            this.linkLabelLM.Text = "www.leapmotion.com";
             this.linkLabelLM.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnLMWebsite);
+            this.linkLabelLM.Text = "访问 Leap Motion 官网"; // 假设原文本为英文，汉化
             // 
             // label9
             // 
@@ -567,8 +566,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(432, 26);
             this.label9.TabIndex = 2;
-            this.label9.Text = "open3mod supports using the LeapMotion (tm) tracking device to control the 3D vie" +
-    "wport. \r\nFor more information, go to ";
+            this.label9.Text = "支持使用LeapMotion （tm）跟踪设备来控制3D视口。\r\n有关更多信息，请访问 ";
             // 
             // SmoothingGroup
             // 
@@ -583,7 +581,7 @@
             this.SmoothingGroup.Size = new System.Drawing.Size(494, 182);
             this.SmoothingGroup.TabIndex = 1;
             this.SmoothingGroup.TabStop = false;
-            this.SmoothingGroup.Text = "Smoothing";
+            this.SmoothingGroup.Text = "平滑设置"; // 假设原文本为英文，汉化
             // 
             // SmoothLabel
             // 
@@ -593,7 +591,7 @@
             this.SmoothLabel.Name = "SmoothLabel";
             this.SmoothLabel.Size = new System.Drawing.Size(43, 13);
             this.SmoothLabel.TabIndex = 4;
-            this.SmoothLabel.Text = "Smooth";
+            this.SmoothLabel.Text = "平滑度设置说明"; // 假设原文本为英文，汉化
             // 
             // ResponsiveLabel
             // 
@@ -603,7 +601,7 @@
             this.ResponsiveLabel.Name = "ResponsiveLabel";
             this.ResponsiveLabel.Size = new System.Drawing.Size(63, 13);
             this.ResponsiveLabel.TabIndex = 3;
-            this.ResponsiveLabel.Text = "Responsive";
+            this.ResponsiveLabel.Text = "响应度设置说明"; // 假设原文本为英文，汉化
             // 
             // RotationSmoothing
             // 
@@ -616,7 +614,7 @@
             this.RotationSmoothing.Name = "RotationSmoothing";
             this.RotationSmoothing.Size = new System.Drawing.Size(139, 17);
             this.RotationSmoothing.TabIndex = 2;
-            this.RotationSmoothing.Text = "Smooth Hands Rotation";
+            this.RotationSmoothing.Text = "启用旋转平滑"; // 假设原文本为英文，汉化
             this.RotationSmoothing.UseVisualStyleBackColor = true;
             // 
             // trackBar1
@@ -643,7 +641,7 @@
             this.TranslationSmoothing.Name = "TranslationSmoothing";
             this.TranslationSmoothing.Size = new System.Drawing.Size(154, 17);
             this.TranslationSmoothing.TabIndex = 0;
-            this.TranslationSmoothing.Text = "Smooth Hands Movements";
+            this.TranslationSmoothing.Text = "启用平移平滑"; // 假设原文本为英文，汉化
             this.TranslationSmoothing.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -672,8 +670,8 @@
             this.labelPleaseRestart.Name = "labelPleaseRestart";
             this.labelPleaseRestart.Size = new System.Drawing.Size(232, 13);
             this.labelPleaseRestart.TabIndex = 2;
-            this.labelPleaseRestart.Text = "Please restart the application to see all changes";
             this.labelPleaseRestart.Visible = false;
+            this.labelPleaseRestart.Text = "部分设置更改后需重启应用"; // 假设原文本为英文，汉化
             // 
             // folderSetDisplaySearchPaths
             // 
@@ -695,7 +693,7 @@
             this.MaximizeBox = false;
             this.Name = "SettingsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "open3mod Settings";
+            this.Text = "设置对话框"; // 假设原文本为英文，汉化
             this.tabControl.ResumeLayout(false);
             this.tabPageGeneral.ResumeLayout(false);
             this.tabPageGeneral.PerformLayout();
@@ -721,7 +719,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

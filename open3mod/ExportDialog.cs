@@ -93,7 +93,7 @@ namespace open3mod
 
         private void UpdateCaption()
         {
-            string str = "Export ";
+            string str = "导出 ";
             var scene = _main.UiState.ActiveTab.ActiveScene;
             if (scene != null)
             {
@@ -103,7 +103,7 @@ namespace open3mod
             else
             {
                 buttonExportRun.Enabled = false;
-                str += "<no scene currently selected>";
+                str += "<当前没有选择场景>";
             }
 
             Text = str;
@@ -135,7 +135,7 @@ namespace open3mod
             var scene = _main.UiState.ActiveTab.ActiveScene;
             if (scene == null)
             {
-                MessageBox.Show("No exportable scene selected");
+                MessageBox.Show("没有选择可导出的场景");
                 return;
             }
             DoExport(scene, SelectedFormatId);
@@ -151,7 +151,7 @@ namespace open3mod
             var fullPath = Path.Combine(path, name);
             if (!overwriteWithoutConfirmation && Path.GetFullPath(fullPath) == Path.GetFullPath(scene.File))
             {
-                if (MessageBox.Show("This will overwrite the current scene's source file. Continue?", "Warning", 
+                if (MessageBox.Show("这将覆盖当前场景的源文件。继续吗?", "Warning", 
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {
                     PushLog("Canceled");
@@ -269,7 +269,7 @@ namespace open3mod
                         {
                             // TODO: get native error message
                             PushLog("Export failure");
-                            MessageBox.Show("Failed to export to " + fullPath, "Export error",
+                            MessageBox.Show("导出失败 " + fullPath, "Export error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
@@ -290,8 +290,8 @@ namespace open3mod
                                         {
                                             throw;
                                         }
-                                        if (!overwriteWithoutConfirmation && MessageBox.Show("Texture " + kv.Value +
-                                                " already exists. Overwrite?", "Overwrite Warning",
+                                        if (!overwriteWithoutConfirmation && MessageBox.Show("纹理 " + kv.Value +
+                                                " 已经存在。覆盖?", "Overwrite Warning",
                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                                         {
                                             PushLog("Exists already, skipping");

@@ -459,7 +459,7 @@ namespace open3mod
                     (x2 - x1) * RenderResolution.Width,
                     (y2 - y1) * RenderResolution.Height);
 
-                DrawShadowedString(graphics, "Press [R] to reset the view", Window.UiState.DefaultFont10,
+                DrawShadowedString(graphics, "按[R]复位视图", Window.UiState.DefaultFont10,
                     rect, Color.Black, Color.FromArgb(50, Color.White), format);         
             }
 
@@ -565,12 +565,12 @@ namespace open3mod
 
 
         private static readonly string[] DescTable = new[] 
-        { 
-            "Lock on X axis", 
-            "Lock on Y axis", 
-            "Lock on Z axis", 
-            "Orbit view", 
-            "First-person view - use WASD or arrows to move",
+        {
+            "锁定X轴",
+            "锁定Y轴",
+            "锁定Z轴",
+            "轨道视图",
+            "第一人称视角-使用WASD方向键或箭头移动",
       // Picking view is not implemented yet
       //      "Info picker"
         };
@@ -773,7 +773,7 @@ namespace open3mod
             format.LineAlignment = StringAlignment.Center;
             format.Alignment = StringAlignment.Center;
 
-            graphics.DrawString("Drag file here", Window.UiState.DefaultFont16,
+            graphics.DrawString("将文件拖到这里或者双击打开", Window.UiState.DefaultFont16,
                                 new SolidBrush(Color.Black),
                                 new RectangleF(0, 0, GlControl.Width, GlControl.Height),
                                 format);
@@ -790,7 +790,7 @@ namespace open3mod
 
             var format = new StringFormat {LineAlignment = StringAlignment.Center, Alignment = StringAlignment.Center};
 
-            graphics.DrawString("Loading ...", Window.UiState.DefaultFont16,
+            graphics.DrawString("加载 ...", Window.UiState.DefaultFont16,
                                 new SolidBrush(Color.Black),
                                 new RectangleF(0, 0, GlControl.Width, GlControl.Height),
                                 format);
@@ -812,12 +812,12 @@ namespace open3mod
 
             graphics.DrawImage(img, GlControl.Width/2 - img.Width/2, GlControl.Height/2 - img.Height - 30, img.Width,
                                img.Height);
-            graphics.DrawString("Sorry, this scene failed to load.", Window.UiState.DefaultFont16,
+            graphics.DrawString("对不起，场景无法加载.", Window.UiState.DefaultFont16,
                                 new SolidBrush(Color.Red),
                                 new RectangleF(0, 0, GlControl.Width, GlControl.Height),
                                 format);
 
-            graphics.DrawString("What the importer said went wrong: " + message, Window.UiState.DefaultFont12,
+            graphics.DrawString("出错了: " + message, Window.UiState.DefaultFont12,
                                 new SolidBrush(Color.Black),
                                 new RectangleF(0, 100, GlControl.Width, GlControl.Height),
                                 format);

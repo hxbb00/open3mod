@@ -292,7 +292,7 @@ namespace open3mod
             }
             catch(FormatException)
             {
-                labelGotoError.Text = "Not a valid time";
+                labelGotoError.Text = "不是一个有效的时间";
                 return;
             }
             Debug.Assert(pos >= 0);

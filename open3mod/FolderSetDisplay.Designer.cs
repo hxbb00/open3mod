@@ -42,7 +42,7 @@
             this.buttonRemoveFolder.Name = "buttonRemoveFolder";
             this.buttonRemoveFolder.Size = new System.Drawing.Size(89, 23);
             this.buttonRemoveFolder.TabIndex = 11;
-            this.buttonRemoveFolder.Text = "Remove";
+            this.buttonRemoveFolder.Text = "删除";
             this.buttonRemoveFolder.UseVisualStyleBackColor = true;
             this.buttonRemoveFolder.Click += new System.EventHandler(this.OnRemoveFolder);
             // 
@@ -52,7 +52,7 @@
             this.buttonAddFolder.Name = "buttonAddFolder";
             this.buttonAddFolder.Size = new System.Drawing.Size(89, 23);
             this.buttonAddFolder.TabIndex = 10;
-            this.buttonAddFolder.Text = "Add";
+            this.buttonAddFolder.Text = "添加";
             this.buttonAddFolder.UseVisualStyleBackColor = true;
             this.buttonAddFolder.Click += new System.EventHandler(this.OnAddFolder);
             // 

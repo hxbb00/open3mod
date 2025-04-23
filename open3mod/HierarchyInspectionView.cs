@@ -126,7 +126,7 @@ namespace open3mod
 
         private void UpdateStatistics()
         {
-            labelNodeStats.Text = string.Format("Showing {0} of {1} nodes ({2} meshes, {3} instances)",
+            labelNodeStats.Text = string.Format("显示{0}/{1}节点（{2}网格，{3}实例）",
                 CountVisible,
                 CountNodes,
                 CountVisibleMeshes,
@@ -1092,7 +1092,7 @@ namespace open3mod
             // Joints cannot be hidden - it would not make any sense because
             // they don't carry meshes anyway.
             cm.Items[1].Enabled = GetNodePurpose(node) != NodePurpose.Joint;
-            cm.Items[1].Text = IsNodeHidden(node) ? "Unhide" : "Hide from View";
+            cm.Items[1].Text = IsNodeHidden(node) ? "显示" : "隐藏";
         }
 
 
@@ -1106,7 +1106,7 @@ namespace open3mod
             var sceneNode = (Node)node.Tag;
             if (sceneNode.Parent == null)
             {
-                MessageBox.Show("The scene root node cannot be deleted", "Error",
+                MessageBox.Show("场景根节点不能被删除", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }

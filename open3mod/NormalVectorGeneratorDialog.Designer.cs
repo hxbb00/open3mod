@@ -3,14 +3,14 @@
     sealed partial class NormalVectorGeneratorDialog
     {
         /// <summary>
-        /// Required designer variable.
+        /// 必需的设计器变量。
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// 清理正在使用的所有资源。
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +23,8 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// 设计器支持所需的方法 - 不要使用代码编辑器修改
+        /// 此方法的内容。
         /// </summary>
         private void InitializeComponent()
         {
@@ -46,7 +46,7 @@
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(128, 23);
             this.buttonOk.TabIndex = 0;
-            this.buttonOk.Text = "OK";
+            this.buttonOk.Text = "确定";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.OnOk);
             // 
@@ -57,7 +57,7 @@
             this.buttonApply.Name = "buttonApply";
             this.buttonApply.Size = new System.Drawing.Size(65, 23);
             this.buttonApply.TabIndex = 1;
-            this.buttonApply.Text = "Apply";
+            this.buttonApply.Text = "应用";
             this.buttonApply.UseVisualStyleBackColor = true;
             this.buttonApply.Click += new System.EventHandler(this.OnManualApply);
             // 
@@ -68,7 +68,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 2;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "取消";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.OnCancel);
             // 
@@ -91,7 +91,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Smoothness (Maximum angle between neighboring faces)";
+            this.label1.Text = "平滑度（相邻面之间的最大角度）";
             // 
             // labelAngle
             // 
@@ -100,7 +100,7 @@
             this.labelAngle.Name = "labelAngle";
             this.labelAngle.Size = new System.Drawing.Size(46, 13);
             this.labelAngle.TabIndex = 6;
-            this.labelAngle.Text = "<Angle>";
+            this.labelAngle.Text = "<角度>";
             // 
             // checkBoxRealtimePreview
             // 
@@ -112,7 +112,7 @@
             this.checkBoxRealtimePreview.Name = "checkBoxRealtimePreview";
             this.checkBoxRealtimePreview.Size = new System.Drawing.Size(108, 17);
             this.checkBoxRealtimePreview.TabIndex = 3;
-            this.checkBoxRealtimePreview.Text = "Realtime Preview";
+            this.checkBoxRealtimePreview.Text = "实时预览";
             this.checkBoxRealtimePreview.UseVisualStyleBackColor = true;
             this.checkBoxRealtimePreview.CheckedChanged += new System.EventHandler(this.CheckBoxRealtimePreviewCheckedChanged);
             // 
@@ -125,7 +125,7 @@
             this.labelStatusText.Name = "labelStatusText";
             this.labelStatusText.Size = new System.Drawing.Size(57, 13);
             this.labelStatusText.TabIndex = 7;
-            this.labelStatusText.Text = "<Status>";
+            this.labelStatusText.Text = "<状态>";
             // 
             // NormalVectorGeneratorDialog
             // 
@@ -148,7 +148,7 @@
             this.Name = "NormalVectorGeneratorDialog";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Generate Normal Vectors";
+            this.Text = "生成法线向量";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnClose);
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAngle)).EndInit();

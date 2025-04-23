@@ -61,7 +61,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "New name";
+            this.label1.Text = "新名称";
             // 
             // buttonCancel
             // 
@@ -70,7 +70,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(80, 23);
             this.buttonCancel.TabIndex = 3;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "取消";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.OnCancel);
             // 
@@ -82,7 +82,7 @@
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(57, 13);
             this.labelStatus.TabIndex = 4;
-            this.labelStatus.Text = "<Status>";
+            this.labelStatus.Text = "<状态>";
             // 
             // RenameDialog
             // 
@@ -97,7 +97,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "RenameDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Rename";
+            this.Text = "重命名";
             this.ResumeLayout(false);
             this.PerformLayout();
 

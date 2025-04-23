@@ -88,14 +88,14 @@ namespace open3mod
             this.replaceToolStripMenuItem.Enabled = false;
             this.replaceToolStripMenuItem.Name = "replaceToolStripMenuItem";
             this.replaceToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.replaceToolStripMenuItem.Text = "Open";
+            this.replaceToolStripMenuItem.Text = "打开";
             this.replaceToolStripMenuItem.Click += new System.EventHandler(this.OnContextMenuOpen);
             // 
             // replaceToolStripMenuItem1
             // 
             this.replaceToolStripMenuItem1.Name = "replaceToolStripMenuItem1";
             this.replaceToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
-            this.replaceToolStripMenuItem1.Text = "Replace";
+            this.replaceToolStripMenuItem1.Text = "替换";
             //this.replaceToolStripMenuItem1.Click += new System.EventHandler(this.OnContextMenuReplace);
             // 
             // exportToolStripMenuItem
@@ -103,7 +103,7 @@ namespace open3mod
             this.exportToolStripMenuItem.Enabled = false;
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.exportToolStripMenuItem.Text = "Export";
+            this.exportToolStripMenuItem.Text = "导出";
             //this.exportToolStripMenuItem.Click += new System.EventHandler(this.OnContextMenuExport);
             // 
             // ThumbnailControlBase

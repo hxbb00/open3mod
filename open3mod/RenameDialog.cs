@@ -49,30 +49,30 @@ namespace open3mod
             if (textBoxNewName.Text.Trim() == "")
             {
                 labelStatus.ForeColor = Color.Red;
-                labelStatus.Text = "Name can not be empty.";
+                labelStatus.Text = "名称不能为空。";
                 buttonOk.Enabled = false;
             }
             else if (textBoxNewName.Text == OldName)
             {
                 labelStatus.ForeColor = Color.Green;
-                labelStatus.Text = "Unchanged";
+                labelStatus.Text = "未改变的";
                 NewName = OldName;
             }
             else if (_blacklist.Contains(textBoxNewName.Text))
             {
                 labelStatus.ForeColor = Color.Red;
-                labelStatus.Text = "Name is already used and cannot be re-used.";
+                labelStatus.Text = "名称已被使用，不能重复使用。";
                 buttonOk.Enabled = false;
             }
             else if (_greylist.Contains(textBoxNewName.Text))
             {
                 labelStatus.ForeColor = Color.Orange;
-                labelStatus.Text = "Name is already used. It can be used again,\nbut should be avoided.";
+                labelStatus.Text = "名称已被使用。它可以再次使用，但应避免使用。";
             }
             else if (textBoxNewName.Text.Contains(" ") || textBoxNewName.Text.Contains("\t"))
             {
                 labelStatus.ForeColor = Color.Orange;
-                labelStatus.Text = "Avoid whitespace in names";
+                labelStatus.Text = "避免在名称中使用空格";
             }
             else
             {
