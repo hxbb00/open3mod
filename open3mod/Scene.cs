@@ -150,15 +150,15 @@ namespace open3mod
         public string StatsString
         {
             get {
-                var s = string.Format(" Raw Loading Time: {0} ms - ", LoadingTime);         
-                s += string.Format("{0} Vertices, {1} Triangles", TotalVertexCount, TotalTriangleCount);
+                var s = string.Format(" 原始加载时间: {0} ms - ", LoadingTime);         
+                s += string.Format("{0} 顶点, {1} 三角形", TotalVertexCount, TotalTriangleCount);
                 if (TotalLineCount > 0)
                 {
-                    s += string.Format(", {0} Lines", TotalLineCount);
+                    s += string.Format(", {0} 线", TotalLineCount);
                 }
                 if (TotalPointCount > 0)
                 {
-                    s += string.Format(", {0} Points", TotalLineCount);
+                    s += string.Format(", {0} 点", TotalLineCount);
                 }               
                 return s;
             }

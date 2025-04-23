@@ -167,8 +167,6 @@ namespace open3mod
                 _logViewer.Show();
             }
         }
-
-
         partial void OnMouseDown(object sender, MouseEventArgs e)
         {
             UpdateActiveViewIfNeeded(e);

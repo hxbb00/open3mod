@@ -30,7 +30,7 @@
         {
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.inspectionView1 = new open3mod.InspectionView();
-            //((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             this.SuspendLayout();
@@ -43,16 +43,16 @@
             this.splitContainer.DataBindings.Add(new System.Windows.Forms.Binding("SplitterDistance", global::CoreSettings.CoreSettings.Default, "InspectorSplitterPos", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.splitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.splitContainer.Name = "splitContainer";
             this.splitContainer.Panel1MinSize = 10;
             // 
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.inspectionView1);
-            this.splitContainer.Panel2MinSize = 10;
-            this.splitContainer.SplitterDistance = 20; 
-            this.splitContainer.Size = new System.Drawing.Size(971, 650);          
-            this.splitContainer.SplitterWidth = 3;
+            this.splitContainer.Panel2MinSize = 60;
+            this.splitContainer.Size = new System.Drawing.Size(1295, 750);
+            this.splitContainer.SplitterDistance = 1165;
             this.splitContainer.TabIndex = 0;
             this.splitContainer.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.OnSplitterMove);
             // 
@@ -63,20 +63,20 @@
             this.inspectionView1.Location = new System.Drawing.Point(0, 0);
             this.inspectionView1.Margin = new System.Windows.Forms.Padding(0);
             this.inspectionView1.Name = "inspectionView1";
-            this.inspectionView1.Size = new System.Drawing.Size(710, 650);
+            this.inspectionView1.Size = new System.Drawing.Size(126, 750);
             this.inspectionView1.TabIndex = 0;
             // 
             // TabUiSkeleton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.MinimumSize = new System.Drawing.Size(400, 0);
+            this.MinimumSize = new System.Drawing.Size(533, 0);
             this.Name = "TabUiSkeleton";
-            this.Size = new System.Drawing.Size(971, 650);
+            this.Size = new System.Drawing.Size(1295, 750);
             this.splitContainer.Panel2.ResumeLayout(false);
-            //((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
